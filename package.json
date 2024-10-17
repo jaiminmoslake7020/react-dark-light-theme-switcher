@@ -1,0 +1,73 @@
+{
+  "name": "@jaiminmoslake7020/react-dark-light-theme-switcher",
+  "version": "0.0.1",
+  "description": "This library provides Provider, Context and Button components to be used in a react application to support dark and light mode.",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/main.js",
+  "module": "./dist/main.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/main.js",
+      "types": "./dist/main.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "rimraf dist && rollup -c",
+    "dev": "rollup -c -w",
+    "playground": "vite",
+    "playground-build": "vite build",
+    "watch:css": "sass playground/main.scss playground/style.css --watch",
+    "watch:tailwindcss": "npx tailwindcss -i ./playground/style.css -o ./playground/output.css --watch"
+  },
+  "keywords": [
+    "react",
+    "typing",
+    "text"
+  ],
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.3.11",
+    "@types/styled-components": "^5.1.34",
+    "@vitejs/plugin-react": "^4.3.2",
+    "autoprefixer": "^10.4.20",
+    "install": "^0.13.0",
+    "npm": "^10.9.0",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.22.4",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.79.4",
+    "styled-components": "^6.1.13",
+    "tailwindcss": "^3.4.13",
+    "tslib": "^2.7.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.8",
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2"
+  },
+  "author": {
+    "name": "Jaimin Pandya",
+    "email": "jaiminmoslake7020@gmail.com",
+    "url": "https://jaimin-pandya.netlify.app/"
+  },
+  "license": "ISC"
+}
