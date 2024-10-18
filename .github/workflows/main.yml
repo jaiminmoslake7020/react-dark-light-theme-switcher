@@ -1,0 +1,29 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - "main"  # Change this to your branch if needed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install pnpm
+        run: npm install -g pnpm  # or your package manager (yarn, pnpm, etc.)
+
+      - name: Install dependencies
+        run: pnpm install  # or your package manager (yarn, pnpm, etc.)
+
+      - name: Build the website
+        run: pnpm run playground:build  # or the command you use to build your project
+
+      - name: Build the project
+        run:  ./scripts/prod-new.sh "${{ github.ref_name }}-${{ github.sha }}"  # or the command you use to build your project
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID__AUTHOR_SITE }}  # Add this if you want to specify the site
