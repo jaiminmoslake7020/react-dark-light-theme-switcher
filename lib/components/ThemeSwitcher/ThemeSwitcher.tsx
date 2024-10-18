@@ -23,18 +23,16 @@ export type ThemeSwitcherBtnPropTypes = {
 export const ThemeSwitcherBtn = (props: ThemeSwitcherBtnPropTypes) => {
     const { theme, setTheme, themeSwitcherContainerClassName, iconWrapperClassName, sunIconWrapperClassName, moonIconWrapperClassName } = props;
     const p = theme === "light";
-    const lightActive = p ? "active" : "";
-    const darkActive = !p ? "active" : "";
     return (
         <>
             <GlobalStyles />
-            <ThemeSwitcherContainer lightActive={p} darkActive={!p} className={`theme-switcher-container ${lightActive ? 'light-active' : 'dark-active'} ${themeSwitcherContainerClassName || ""} `} >
-                <SunIconWrapper active={p} role={"button"} className={` icon-wrapper sun-wrapper  ${lightActive} ${iconWrapperClassName || ""} ${sunIconWrapperClassName || ""} `} onClick={() => {
+            <ThemeSwitcherContainer lightActive={p} darkActive={!p} className={`theme-switcher-container ${p ? 'light-active' : 'dark-active'} ${themeSwitcherContainerClassName || ""} `} >
+                <SunIconWrapper active={p} role={"button"} className={` icon-wrapper sun-wrapper  ${p ? 'active' : ''} ${iconWrapperClassName || ""} ${sunIconWrapperClassName || ""} `} onClick={() => {
                     setTheme("light");
                 }} >
                     <FontAwesomeIcon icon={faSun} />
                 </SunIconWrapper>
-                <MoonIconWrapper active={!p} role={"button"} className={` icon-wrapper moon-wrapper ${darkActive} ${iconWrapperClassName || ""} ${moonIconWrapperClassName || ""} `} onClick={() => {
+                <MoonIconWrapper active={!p} role={"button"} className={` icon-wrapper moon-wrapper ${p ? '' : 'active'} ${iconWrapperClassName || ""} ${moonIconWrapperClassName || ""} `} onClick={() => {
                     setTheme("dark");
                 }}>
                     <FontAwesomeIcon icon={faMoon} />

@@ -36,7 +36,6 @@ export default [
         file: "dist/main.js",
         format: "esm",
       },
-
     ]
   },
   {

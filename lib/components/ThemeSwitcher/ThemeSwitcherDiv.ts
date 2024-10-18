@@ -27,13 +27,13 @@ export const GlobalStyles = createGlobalStyle`
   
 `;
 
-interface DivProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    lightActive?: boolean; // Optional primary prop
-    darkActive?: boolean; // Size prop with defined values
+interface DivProps {
+    lightActive?: boolean;
+    darkActive?: boolean;
 }
 
-interface IconWrapperProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    active: boolean; // Optional primary prop
+interface IconWrapperProps {
+    active: boolean;
 }
 
 // Define the styled component
