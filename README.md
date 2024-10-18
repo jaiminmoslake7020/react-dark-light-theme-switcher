@@ -1,7 +1,6 @@
 # React Component Package
 
-It is a package that contains reusable React component which is built with Styled-Components, React and TypeScript.
-This package allows a typing text animation feature.
+This package includes React components which can be used to add "light" and "dark" theme to your web application. CSS used in website example project is built with Tailwind seperately. 
 
 ### Website
 

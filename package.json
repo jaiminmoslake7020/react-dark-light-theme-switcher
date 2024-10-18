@@ -19,19 +19,30 @@
     "build": "rimraf dist && rollup -c",
     "dev": "rollup -c -w",
     "playground": "vite",
-    "playground-build": "vite build",
+    "playground:build": "vite build",
+    "serve:build": "serve -s out",
     "watch:css": "sass playground/main.scss playground/style.css --watch",
-    "watch:tailwindcss": "npx tailwindcss -i ./playground/style.css -o ./playground/output.css --watch"
+    "watch:tailwindcss": "npx tailwindcss -i ./playground/style.css -o ./playground/output.css --watch",
+    "watch:lib:css": "sass lib/components/ThemeSwitcher/theme-switcher.scss lib/components/ThemeSwitcher/style.css --watch",
+    "watch:lib:tailwindcss": "npx tailwindcss -i ./lib/components/ThemeSwitcher/style.css -o ./lib/components/ThemeSwitcher/output.css --watch"
   },
   "keywords": [
     "react",
-    "typing",
-    "text"
+    "dark",
+    "light",
+    "theme",
+    "switcher"
   ],
   "peerDependencies": {
     "react": "^18.0.0"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
@@ -57,12 +68,7 @@
     "tsx": "^4.19.1",
     "typescript": "^5.6.3",
     "vite": "^5.4.8",
-    "@fortawesome/fontawesome-free": "^6.6.0",
-    "@fortawesome/fontawesome-svg-core": "^6.6.0",
-    "@fortawesome/free-brands-svg-icons": "^6.6.0",
-    "@fortawesome/free-regular-svg-icons": "^6.6.0",
-    "@fortawesome/free-solid-svg-icons": "^6.6.0",
-    "@fortawesome/react-fontawesome": "^0.2.2"
+    "@jaiminmoslake7020/react-typing-text": "^0.0.10"
   },
   "author": {
     "name": "Jaimin Pandya",
