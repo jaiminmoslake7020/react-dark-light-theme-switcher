@@ -22,9 +22,7 @@
     "playground:build": "vite build",
     "serve:build": "serve -s out",
     "watch:css": "sass playground/main.scss playground/style.css --watch",
-    "watch:tailwindcss": "npx tailwindcss -i ./playground/style.css -o ./playground/output.css --watch",
-    "watch:lib:css": "sass lib/components/ThemeSwitcher/theme-switcher.scss lib/components/ThemeSwitcher/style.css --watch",
-    "watch:lib:tailwindcss": "npx tailwindcss -i ./lib/components/ThemeSwitcher/style.css -o ./lib/components/ThemeSwitcher/output.css --watch"
+    "watch:tailwindcss": "npx tailwindcss -i ./playground/style.css -o ./playground/output.css --watch"
   },
   "keywords": [
     "react",

@@ -5,24 +5,24 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
   @media (prefers-color-scheme: dark) {
     :root {
-      --color-bkg: 2 6 23;
-      --color-content: 243 244 246;
+      --color-bkg-theme-switch-container: 2 6 23;
+      --color-content-theme-switch-container: 243 244 246;
     }
   }
 
   body[data-theme="dark"] {
-    --color-bkg: 2 6 23;
-    --color-content: 243 244 246;
+    --color-bkg-theme-switch-container: 2 6 23;
+    --color-content-theme-switch-container: 243 244 246;
   }
 
   :root {
-    --color-bkg: 226 232 240;
-    --color-content: 39 39 42;
+    --color-bkg-theme-switch-container: 226 232 240;
+    --color-content-theme-switch-container: 39 39 42;
   }
 
   body[data-theme="light"] {
-    --color-bkg: 226 232 240;
-    --color-content: 39 39 42;
+    --color-bkg-theme-switch-container: 226 232 240;
+    --color-content-theme-switch-container: 39 39 42;
   }
   
 `;
@@ -47,8 +47,8 @@ export const ThemeSwitcherContainer = styled.div<DivProps>`
   font-size: 1.125rem;
   line-height: 1.75rem;
   position: relative;
-  background-color: rgb(var(--color-content));
-  color: rgb(var(--color-bkg));
+  background-color: rgb(var(--color-content-theme-switch-container));
+  color: rgb(var(--color-bkg-theme-switch-container));
 
   &:before{
     content: "";
