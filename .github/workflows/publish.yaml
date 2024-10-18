@@ -22,11 +22,8 @@ jobs:
           node-version: '18'  # Specify your Node.js version
           registry-url: 'https://registry.npmjs.org/'  # npm registry URL
 
-      - name: Install pnpm
-        run: npm install -g pnpm  # or your package manager (yarn, pnpm, etc.)
-
       - name: Install Dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Publish Package
         env:
