@@ -8,5 +8,6 @@ export declare const ThemeContext: React.Context<ThemeContextType>;
 export type ThemeProviderProps = {
     children: React.ReactNode;
     applyTo?: 'html' | 'body';
+    preferColorScheme?: boolean;
 };
-export declare const ThemeProvider: ({ children, applyTo }: ThemeProviderProps) => import("react/jsx-runtime").JSX.Element;
+export declare const ThemeProvider: ({ children, applyTo, preferColorScheme }: ThemeProviderProps) => import("react/jsx-runtime").JSX.Element;

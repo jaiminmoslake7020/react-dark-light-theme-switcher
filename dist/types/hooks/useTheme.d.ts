@@ -3,4 +3,4 @@ export type UseThemeType = {
     theme: ThemeType;
     setTheme: (x: ThemeType, fromLocalStorage?: boolean) => void;
 };
-export declare const useTheme: (applyTo?: ApplyToType) => UseThemeType;
+export declare const useTheme: (applyTo?: ApplyToType, preferColorScheme?: boolean) => UseThemeType;

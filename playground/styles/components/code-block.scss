@@ -1,0 +1,63 @@
+.code-block-wrapper{
+  @apply overflow-x-auto w-full font-mono;
+  @apply flex bg-slate-700 gap-0 relative;
+
+  .copy-button{
+    @apply absolute bottom-1 right-1;
+
+    button{
+      @apply w-fit h-fit px-4 py-1 text-slate-300 bg-slate-600 rounded text-sm;
+    }
+  }
+
+  .number-block{
+    @apply flex flex-col bg-slate-800 px-4;
+    @apply py-4 ;
+
+    p {
+      @apply text-slate-500;
+    }
+  }
+
+  .code-block-container{
+    @apply overflow-x-auto w-full flex-grow ;
+    @apply p-4;
+    .code-block {
+      @apply w-fit flex-grow;
+      @apply rounded flex flex-col;
+      .tag-start, .tag-end{
+        @apply text-slate-400;
+      }
+      .tag-self-end {
+        @apply pl-4;
+        @apply text-slate-400;
+      }
+      .el-name {
+        @apply text-pink-400;
+        @apply pr-4;
+      }
+      .attr-name{
+        @apply text-slate-100
+      }
+      .attr-equal-sign, .attr-quote-sign{
+        @apply text-slate-400;
+      }
+      .attr-optional-sign{
+        @apply text-slate-400;
+      }
+      .attr-value{
+        @apply text-blue-300;
+      }
+      .attr-object-value{
+        @apply text-blue-300;
+      }
+      .invisible-item {
+        @apply invisible;
+      }
+      p {
+        @apply min-w-[800px];
+      }
+    }
+  }
+
+}

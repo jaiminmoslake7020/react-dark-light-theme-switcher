@@ -1,0 +1,37 @@
+.btn{
+    @apply py-2 px-6 shadow cursor-pointer font-semibold text-base;
+    @apply bg-theme-btn-bg text-theme-btn-text px-8 py-3 border-theme-btn-border border-2 rounded hover:shadow;
+
+    &.btn-md{
+        @apply py-1 px-3 text-sm;
+    }
+
+    &.btn-xs{
+        @apply py-0.5 px-1 text-xs;
+    }
+
+    &.btn-sm{
+        @apply py-1 px-2 text-sm;
+    }
+
+    &.btn-color-type-2{
+        @apply text-theme-btn-bg bg-theme-btn-text;
+    }
+
+    .icon-and-text-wrapper{
+        @apply flex flex-row gap-3 items-center;
+    }
+
+    &.btn-round{
+        @apply rounded-full;
+    }
+
+}
+
+.btn.active{
+    @apply bg-theme-btn-active-bg text-theme-btn-active-text border-theme-btn-active-border;
+}
+
+.btn[disabled]{
+    @apply bg-opacity-20 cursor-not-allowed text-opacity-20 border-opacity-20 hover:shadow-none;
+}

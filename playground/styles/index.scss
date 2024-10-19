@@ -1,5 +1,46 @@
 @import "base/index";
+@import "components/code-block";
+@import "components/table";
+@import "components/example";
 
+@layer base{
+  .width-flexible{
+    @apply w-[90dvw] md:w-[640px] lg:w-[768px] xl:w-[1024px] 2xl:w-[1280px];
+  }
+}
+
+body {
+  @apply font-sans;
+  @apply flex w-dvw lg:w-screen min-h-[100dvh] lg:min-h-screen justify-center;
+  @apply bg-bkg text-content;
+
+  #root{
+    @apply w-full;
+    .App{
+      @apply w-full;
+    }
+  }
+}
+
+.main-content-wrapper{
+  @apply pt-24 w-full flex justify-center;
+}
+
+.sections-wrapper{
+  @apply flex flex-col flex-wrap gap-8 box-border width-flexible;
+}
+
+.text-container{
+  @apply w-full;
+
+  h4{
+    @apply text-blue-300 font-semibold;
+  }
+}
+
+.logo-box{
+  @apply w-32 !important;
+}
 
 
 

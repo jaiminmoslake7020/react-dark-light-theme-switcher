@@ -1,0 +1,23 @@
+.main-footer{
+  @apply flex gap-6 lg:gap-4 px-6 lg:px-24 py-8 lg:py-4 justify-between items-center w-full ;
+  @apply static lg:absolute lg:bottom-0;
+
+  @apply flex-col lg:flex-row;
+
+  .website-info{
+    @apply w-full lg:w-fit flex flex-col md:flex-row justify-center items-center lg:justify-start gap-4 md:gap-8;
+
+    .icon-heart{
+      @apply text-red-400;
+    }
+
+    p{
+      @apply text-center flex gap-1 items-center;
+    }
+  }
+
+  .social-media-links-wrapper-container{
+    @apply w-fit;
+  }
+
+}

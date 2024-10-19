@@ -9,11 +9,8 @@ import {
 } from "@lib/providers";
 
 const root = createRoot(document.getElementById("root") as HTMLElement);
-// root.render(<StrictMode>
-//     <ThemeProvider applyTo={"body"}>
-//         <App />
-//     </ThemeProvider>
-// </StrictMode>);
-root.render(<ThemeProvider applyTo={"body"} preferColorScheme={false}>
-    <App />
-</ThemeProvider>);
+root.render(<StrictMode>
+    <ThemeProvider applyTo={"body"}>
+        <App />
+    </ThemeProvider>
+</StrictMode>);

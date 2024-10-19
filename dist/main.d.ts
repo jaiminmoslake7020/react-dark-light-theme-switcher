@@ -27,7 +27,7 @@ type UseThemeType = {
     theme: ThemeType;
     setTheme: (x: ThemeType, fromLocalStorage?: boolean) => void;
 };
-declare const useTheme: (applyTo?: ApplyToType) => UseThemeType;
+declare const useTheme: (applyTo?: ApplyToType, preferColorScheme?: boolean) => UseThemeType;
 
 interface ThemeContextType {
     theme: ThemeType;
@@ -37,7 +37,8 @@ declare const ThemeContext: React.Context<ThemeContextType>;
 type ThemeProviderProps = {
     children: React.ReactNode;
     applyTo?: 'html' | 'body';
+    preferColorScheme?: boolean;
 };
-declare const ThemeProvider: ({ children, applyTo }: ThemeProviderProps) => react_jsx_runtime.JSX.Element;
+declare const ThemeProvider: ({ children, applyTo, preferColorScheme }: ThemeProviderProps) => react_jsx_runtime.JSX.Element;
 
 export { type ApplyToType, ThemeContext, type ThemeContextType, ThemeProvider, ThemeSwitcherBtn, type ThemeSwitcherBtnPropTypes, ThemeSwitcherBtnProviderChild, type ThemeSwitcherBtnProviderChildPropTypes, type ThemeType, type UseThemeType, useTheme };
