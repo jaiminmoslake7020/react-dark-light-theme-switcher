@@ -6,7 +6,7 @@ export type UseThemeType = {
     setTheme: (x: ThemeType, fromLocalStorage?: boolean) => void
 };
 
-export const useTheme = ( applyTo : ApplyToType = undefined ) : UseThemeType => {
+export const useTheme = ( applyTo : ApplyToType = undefined, preferColorScheme: boolean = true ) : UseThemeType => {
 
     const [theme, setThemeCall] = useState<ThemeType>('light');
 
@@ -26,24 +26,23 @@ export const useTheme = ( applyTo : ApplyToType = undefined ) : UseThemeType => 
     useEffect(() => {
         const mount = () => {
             if (window) {
-                const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                if (prefersDarkScheme) {
-                    const x = localStorage.getItem('theme');
-                    if (x === 'light') {
+                if (preferColorScheme) {
+                    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if (prefersDarkScheme) {
                         setTheme('dark');
-                    } else if (x === 'dark' ) {
-                        setTheme(x, true);
+                    } else {
+                        setTheme('light');
                     }
                 } else {
                     const x = localStorage.getItem('theme');
                     if (x === 'light' || x === 'dark') {
-                        setTheme(x);
+                        setTheme(x, true);
                     }
                 }
             }
         }
         return mount();
-    }, [setTheme]);
+    }, [setTheme, preferColorScheme]);
 
     return {
         theme, setTheme

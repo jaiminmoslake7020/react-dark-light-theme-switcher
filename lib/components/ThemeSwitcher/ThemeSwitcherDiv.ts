@@ -37,7 +37,9 @@ interface IconWrapperProps {
 }
 
 // Define the styled component
-export const ThemeSwitcherContainer = styled.div<DivProps>`
+export const ThemeSwitcherContainer = styled('div').withConfig({
+    shouldForwardProp: (prop) => !['lightActive', 'darkActive'].includes(prop)
+})<DivProps>`
   display: flex;
   width: -moz-fit-content;
   width: fit-content;
@@ -68,7 +70,9 @@ export const ThemeSwitcherContainer = styled.div<DivProps>`
 `;
 
 
-export const IconWrapper = styled.div<IconWrapperProps>`
+export const IconWrapper = styled('div').withConfig({
+    shouldForwardProp: (prop) => !['active'].includes(prop)
+})<IconWrapperProps>`
   z-index: 10;
   width: -moz-fit-content;
   width: fit-content;

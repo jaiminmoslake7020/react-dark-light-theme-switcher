@@ -14,6 +14,6 @@ const root = createRoot(document.getElementById("root") as HTMLElement);
 //         <App />
 //     </ThemeProvider>
 // </StrictMode>);
-root.render(<ThemeProvider applyTo={"body"}>
+root.render(<ThemeProvider applyTo={"body"} preferColorScheme={false}>
     <App />
 </ThemeProvider>);

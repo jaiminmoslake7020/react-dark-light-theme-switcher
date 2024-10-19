@@ -15,12 +15,13 @@ export const ThemeContext: React.Context<ThemeContextType> = createContext({
 
 export type ThemeProviderProps = {
     children: React.ReactNode,
-    applyTo?: 'html' | 'body'
+    applyTo?: 'html' | 'body',
+    preferColorScheme?: boolean
 };
 
 // Create a provider component
-export const ThemeProvider = ({ children, applyTo }: ThemeProviderProps ) => {
-    const { theme, setTheme } = useTheme(applyTo);
+export const ThemeProvider = ({ children, applyTo, preferColorScheme }: ThemeProviderProps ) => {
+    const { theme, setTheme } = useTheme(applyTo, typeof preferColorScheme === 'boolean' ? preferColorScheme : true);
     return (
         <ThemeContext.Provider value={{ theme, setTheme }}>
             {children}
