@@ -14,6 +14,7 @@ const App = () => {
                 <section className={"w-full flex justify-center"}>
                     <Example />
                 </section>
+
             </div>
         </MainContent>
     </main>
