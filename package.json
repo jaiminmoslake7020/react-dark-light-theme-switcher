@@ -1,6 +1,6 @@
 {
   "name": "@jaiminmoslake7020/react-dark-light-theme-switcher",
-  "version": "0.0.2",
+  "version": "1.0.1",
   "description": "This library provides Provider, Context and Button components to be used in a react application to support dark and light mode.",
   "type": "module",
   "files": [
