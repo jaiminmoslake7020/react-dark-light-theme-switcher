@@ -6,7 +6,6 @@ import {
     socialLinks
 } from '../data/socialLinks';
 import HeaderWrapper from './HeaderWrapper';
-import {inDevEnvironment} from '../utils/utils';
 
 export type MainContentPropTypes = {
     pageNameClass: string,
