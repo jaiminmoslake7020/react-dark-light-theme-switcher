@@ -22,23 +22,19 @@ const MainContent = (props: MainContentPropTypes) => {
     const [versionName, setVersionName] = useState<null | string>(null);
 
     useEffect(() => {
-        if (!inDevEnvironment) {
-            try {
-                fetch('./version.txt').then(r => r.text()).then(s =>  {
-                    try {
-                        if (typeof s === "string" && s.indexOf('author-release-') !== -1 && s.length >= 20) {
-                            setVersionName(s.replace('author-release-','').slice(0, 12));
-                        } else {
-                            setVersionName('bx-0.0.1');
-                        }
-                    } catch (e) {
-                        setVersionName('cx-0.0.1');
+        try {
+            fetch('./version.txt').then(r => r.text()).then(s =>  {
+                try {
+                    if (typeof s === "string" && s.indexOf('release-') !== -1 && s.length >= 20) {
+                        setVersionName(s.replace('release-','').slice(0, 12));
+                    } else {
+                        setVersionName('dev');
                     }
-                });
-            } catch (e) {
-                setVersionName('dx-0.0.1');
-            }
-        } else {
+                } catch (e) {
+                    setVersionName('dev');
+                }
+            });
+        } catch (e) {
             setVersionName('dev');
         }
     },[])
