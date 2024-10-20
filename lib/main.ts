@@ -5,20 +5,20 @@ import {
     ThemeSwitcherBtn, ThemeSwitcherBtnProviderChild, ThemeSwitcherBtnPropTypes, ThemeSwitcherBtnProviderChildPropTypes
 } from './components';
 import {
-    useTheme, UseThemeType
+    useThemeSwitch, UseThemeSwitchType
 } from './hooks';
 import {
-    ThemeContext, ThemeContextType, ThemeProvider
+    ThemeSwitchContext, ThemeSwitchContextType, ThemeSwitchProvider
 } from './providers';
 
 export {
     ThemeSwitcherBtn,
     ThemeSwitcherBtnProviderChild,
-    ThemeProvider,
-    ThemeContext,
-    useTheme
+    ThemeSwitchProvider,
+    ThemeSwitchContext,
+    useThemeSwitch
 }
 
 export type {
-    ThemeContextType, UseThemeType, ThemeType, ApplyToType, ThemeSwitcherBtnPropTypes, ThemeSwitcherBtnProviderChildPropTypes
+    ThemeSwitchContextType, UseThemeSwitchType, ThemeType, ApplyToType, ThemeSwitcherBtnPropTypes, ThemeSwitcherBtnProviderChildPropTypes
 };

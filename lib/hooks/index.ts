@@ -1,12 +1,12 @@
 import {
-    useTheme,
-    UseThemeType
-} from './useTheme';
+    useThemeSwitch,
+    UseThemeSwitchType
+} from './useThemeSwitch';
 
 export {
-    useTheme
+    useThemeSwitch
 };
 
 export type {
-    UseThemeType
+    UseThemeSwitchType
 };

@@ -1,9 +1,9 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {TypingText} from '@jaiminmoslake7020/react-typing-text';
-import {ThemeContext} from '@lib/providers';
+import {ThemeSwitchContext} from '@lib/providers';
 
 const Example = () => {
-    const { theme } = useContext(ThemeContext);
+    const { theme } = useContext(ThemeSwitchContext);
     const [text, setText] = useState<string>('');
 
     useEffect(() => {

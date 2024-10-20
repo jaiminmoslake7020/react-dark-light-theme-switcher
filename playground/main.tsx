@@ -5,12 +5,12 @@ import { createRoot } from "react-dom/client";
 // Local
 import App from "./App";
 import {
-    ThemeProvider
+    ThemeSwitchProvider
 } from "@lib/providers";
 
 const root = createRoot(document.getElementById("root") as HTMLElement);
 root.render(<StrictMode>
-    <ThemeProvider applyTo={"body"}>
+    <ThemeSwitchProvider applyTo={"body"} preferColorScheme={false} >
         <App />
-    </ThemeProvider>
+    </ThemeSwitchProvider>
 </StrictMode>);

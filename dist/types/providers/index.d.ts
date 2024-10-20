@@ -1,3 +1,3 @@
-import { ThemeContext, ThemeProvider, ThemeContextType } from './ThemeProvider';
-export { ThemeProvider, ThemeContext };
-export type { ThemeContextType };
+import { ThemeSwitchContext, ThemeSwitchProvider, ThemeSwitchContextType } from './ThemeSwitchProvider';
+export { ThemeSwitchProvider, ThemeSwitchContext };
+export type { ThemeSwitchContextType };

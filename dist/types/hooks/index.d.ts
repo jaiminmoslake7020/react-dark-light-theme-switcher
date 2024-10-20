@@ -1,3 +1,3 @@
-import { useTheme, UseThemeType } from './useTheme';
-export { useTheme };
-export type { UseThemeType };
+import { useThemeSwitch, UseThemeSwitchType } from './useThemeSwitch';
+export { useThemeSwitch };
+export type { UseThemeSwitchType };

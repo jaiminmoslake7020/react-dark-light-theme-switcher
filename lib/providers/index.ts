@@ -1,14 +1,14 @@
 import {
-    ThemeContext,
-    ThemeProvider,
-    ThemeContextType
-} from './ThemeProvider';
+    ThemeSwitchContext,
+    ThemeSwitchProvider,
+    ThemeSwitchContextType
+} from './ThemeSwitchProvider';
 
 
 export {
-    ThemeProvider, ThemeContext
+    ThemeSwitchProvider, ThemeSwitchContext
 };
 
 export type {
-    ThemeContextType
+    ThemeSwitchContextType
 };

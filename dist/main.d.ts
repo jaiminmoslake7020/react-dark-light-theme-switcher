@@ -23,22 +23,22 @@ type ThemeSwitcherBtnProviderChildPropTypes = {
 };
 declare const ThemeSwitcherBtnProviderChild: (props: ThemeSwitcherBtnProviderChildPropTypes) => react_jsx_runtime.JSX.Element;
 
-type UseThemeType = {
+type UseThemeSwitchType = {
     theme: ThemeType;
     setTheme: (x: ThemeType, fromLocalStorage?: boolean) => void;
 };
-declare const useTheme: (applyTo?: ApplyToType, preferColorScheme?: boolean) => UseThemeType;
+declare const useThemeSwitch: (applyTo?: ApplyToType, preferColorScheme?: boolean) => UseThemeSwitchType;
 
-interface ThemeContextType {
+interface ThemeSwitchContextType {
     theme: ThemeType;
     setTheme: (x: ThemeType, fromLocalStorage?: boolean) => void;
 }
-declare const ThemeContext: React.Context<ThemeContextType>;
-type ThemeProviderProps = {
+declare const ThemeSwitchContext: React.Context<ThemeSwitchContextType>;
+type ThemeSwitchProviderProps = {
     children: React.ReactNode;
     applyTo?: 'html' | 'body';
     preferColorScheme?: boolean;
 };
-declare const ThemeProvider: ({ children, applyTo, preferColorScheme }: ThemeProviderProps) => react_jsx_runtime.JSX.Element;
+declare const ThemeSwitchProvider: ({ children, applyTo, preferColorScheme }: ThemeSwitchProviderProps) => react_jsx_runtime.JSX.Element;
 
-export { type ApplyToType, ThemeContext, type ThemeContextType, ThemeProvider, ThemeSwitcherBtn, type ThemeSwitcherBtnPropTypes, ThemeSwitcherBtnProviderChild, type ThemeSwitcherBtnProviderChildPropTypes, type ThemeType, type UseThemeType, useTheme };
+export { type ApplyToType, ThemeSwitchContext, type ThemeSwitchContextType, ThemeSwitchProvider, ThemeSwitcherBtn, type ThemeSwitcherBtnPropTypes, ThemeSwitcherBtnProviderChild, type ThemeSwitcherBtnProviderChildPropTypes, type ThemeType, type UseThemeSwitchType, useThemeSwitch };

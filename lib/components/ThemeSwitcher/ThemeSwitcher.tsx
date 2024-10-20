@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
-import { ThemeContext } from './../../providers';
+import { ThemeSwitchContext } from './../../providers';
 import {ThemeType} from './../../types';
 import {
     ThemeSwitcherContainer,
@@ -53,7 +53,7 @@ export const ThemeSwitcherBtnProviderChild = (props: ThemeSwitcherBtnProviderChi
     const {
         themeSwitcherContainerClassName, iconWrapperClassName, sunIconWrapperClassName, moonIconWrapperClassName
     } = props;
-    const { theme, setTheme } = useContext(ThemeContext);
+    const { theme, setTheme } = useContext(ThemeSwitchContext);
     return (
         <ThemeSwitcherBtn theme={theme} setTheme={setTheme} themeSwitcherContainerClassName={themeSwitcherContainerClassName} iconWrapperClassName={iconWrapperClassName} sunIconWrapperClassName={sunIconWrapperClassName} moonIconWrapperClassName={moonIconWrapperClassName} />
     );

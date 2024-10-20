@@ -1,12 +1,12 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {ApplyToType, ThemeType} from '../types';
 
-export type UseThemeType = {
+export type UseThemeSwitchType = {
     theme: ThemeType,
     setTheme: (x: ThemeType, fromLocalStorage?: boolean) => void
 };
 
-export const useTheme = ( applyTo : ApplyToType = undefined, preferColorScheme: boolean = true ) : UseThemeType => {
+export const useThemeSwitch = (applyTo : ApplyToType = undefined, preferColorScheme: boolean = true ) : UseThemeSwitchType => {
 
     const [theme, setThemeCall] = useState<ThemeType>('light');
 
