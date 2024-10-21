@@ -4,7 +4,7 @@ import React from 'react';
 type ThemeType = "light" | "dark";
 type ElWithClassType = `.${string}`;
 type ElWithIdType = `#${string}`;
-type ApplyToType = 'html' | 'body' | keyof HTMLElementTagNameMap | ElWithClassType | ElWithIdType | undefined;
+type ApplyToType = 'html' | 'body' | keyof HTMLElementTagNameMap | ElWithClassType | ElWithIdType;
 
 type ThemeSwitcherBtnPropTypes = {
     theme: "light" | "dark";
@@ -27,7 +27,7 @@ type UseThemeSwitchType = {
     theme: ThemeType;
     setTheme: (x: ThemeType, fromLocalStorage?: boolean) => void;
 };
-declare const useThemeSwitch: (applyTo?: ApplyToType, preferColorScheme?: boolean) => UseThemeSwitchType;
+declare const useThemeSwitch: (applyTo: ApplyToType, preferColorScheme?: boolean) => UseThemeSwitchType;
 
 interface ThemeSwitchContextType {
     theme: ThemeType;
@@ -36,7 +36,7 @@ interface ThemeSwitchContextType {
 declare const ThemeSwitchContext: React.Context<ThemeSwitchContextType>;
 type ThemeSwitchProviderProps = {
     children: React.ReactNode;
-    applyTo?: 'html' | 'body';
+    applyTo: ApplyToType;
     preferColorScheme?: boolean;
 };
 declare const ThemeSwitchProvider: ({ children, applyTo, preferColorScheme }: ThemeSwitchProviderProps) => react_jsx_runtime.JSX.Element;

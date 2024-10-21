@@ -1,6 +1,6 @@
 {
   "name": "@jaiminmoslake7020/react-dark-light-theme-switcher",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This library provides Provider, Context and Button components to be used in a react application to support dark and light mode.",
   "type": "module",
   "files": [
@@ -19,10 +19,14 @@
     "build": "rimraf dist && rollup -c",
     "dev": "rollup -c -w",
     "playground": "vite",
-    "playground:build": "vite build",
     "serve:build": "serve -s out",
     "watch:css": "sass playground/styles/index.scss playground/styles/style.css --watch",
-    "watch:tailwindcss": "npx tailwindcss -i ./playground/styles/style.css -o ./playground/styles/output.css --watch"
+    "watch:tailwindcss": "npx tailwindcss -i ./playground/styles/style.css -o ./playground/styles/output.css --watch",
+    "build:css": "sass playground/styles/index.scss playground/styles/style.css",
+    "build:tailwindcss": "npx tailwindcss -i ./playground/styles/style.css -o ./playground/styles/output.css",
+    "build:style": "npm run build:css && npm run build:tailwindcss",
+    "playground:build": "npm run build:style && vite build",
+    "prepare": "node .husky/install.mjs"
   },
   "keywords": [
     "react",
@@ -67,7 +71,8 @@
     "typescript": "^5.6.3",
     "vite": "^5.4.8",
     "@jaiminmoslake7020/react-typing-text": "^0.0.10",
-    "@types/node": "^22.7.7"
+    "@types/node": "^22.7.7",
+    "husky": "^9.1.4"
   },
   "author": {
     "name": "Jaimin Pandya",

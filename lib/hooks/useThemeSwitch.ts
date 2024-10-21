@@ -6,7 +6,7 @@ export type UseThemeSwitchType = {
     setTheme: (x: ThemeType, fromLocalStorage?: boolean) => void
 };
 
-export const useThemeSwitch = (applyTo : ApplyToType = undefined, preferColorScheme: boolean = true ) : UseThemeSwitchType => {
+export const useThemeSwitch = (applyTo : ApplyToType, preferColorScheme: boolean = true ) : UseThemeSwitchType => {
 
     const [theme, setThemeCall] = useState<ThemeType>('light');
 

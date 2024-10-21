@@ -1,6 +1,6 @@
 import React, { createContext } from 'react';
 import {useThemeSwitch} from '../hooks';
-import {ThemeType} from '../types';
+import {ApplyToType, ThemeType} from '../types';
 
 export interface ThemeSwitchContextType {
     theme: ThemeType;
@@ -15,7 +15,7 @@ export const ThemeSwitchContext: React.Context<ThemeSwitchContextType> = createC
 
 export type ThemeSwitchProviderProps = {
     children: React.ReactNode,
-    applyTo?: 'html' | 'body',
+    applyTo: ApplyToType,
     preferColorScheme?: boolean
 };
 
