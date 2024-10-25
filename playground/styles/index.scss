@@ -1,7 +1,7 @@
-@import "base/index";
-@import "components/code-block";
-@import "components/table";
-@import "components/example";
+@use "base/index";
+@use "components/code-block";
+@use "components/table";
+@use "components/example";
 
 @layer base{
   .width-flexible{

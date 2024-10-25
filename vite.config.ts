@@ -20,4 +20,11 @@ export default defineConfig({
             '@lib': resolve(__dirname, './lib'),
         },
     },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                api: 'modern-compiler' // or "modern"
+            }
+        }
+    }
 });
