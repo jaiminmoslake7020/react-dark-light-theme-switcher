@@ -24,8 +24,8 @@ const MainContent = (props: MainContentPropTypes) => {
         try {
             fetch('./version.txt').then(r => r.text()).then(s =>  {
                 try {
-                    if (typeof s === "string" && s.indexOf('release-') !== -1 && s.length >= 20) {
-                        setVersionName(s.replace('release-','').slice(0, 12));
+                    if (typeof s === "string" && s.indexOf('main-') !== -1 && s.length >= 20) {
+                        setVersionName(s.replace('main-','').slice(0, 12));
                     } else {
                         setVersionName('dev');
                     }
