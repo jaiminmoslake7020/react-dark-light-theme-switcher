@@ -23,15 +23,7 @@ const MainContent = (props: MainContentPropTypes) => {
     useEffect(() => {
         try {
             fetch('./version.txt').then(r => r.text()).then(s =>  {
-                try {
-                    if (typeof s === "string" && s.indexOf('main-') !== -1 && s.length >= 20) {
-                        setVersionName(s.replace('main-','').slice(0, 12));
-                    } else {
-                        setVersionName('dev');
-                    }
-                } catch (e) {
-                    setVersionName('dev');
-                }
+                setVersionName(s);
             });
         } catch (e) {
             setVersionName('dev');
