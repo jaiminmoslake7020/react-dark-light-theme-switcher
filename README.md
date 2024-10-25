@@ -82,3 +82,7 @@ export type ApplyToType = 'html' | 'body' | keyof HTMLElementTagNameMap | ElWith
 | children           | React.ReactNode |                                                |           |
 
 When preferColorScheme is undefined, it uses browser's "localStorage" API.
+
+## Author
+
+[Jaimin Pandya](https://jaimin-pandya.netlify.app/)
